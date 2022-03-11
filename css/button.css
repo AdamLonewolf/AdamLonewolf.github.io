@@ -67,6 +67,7 @@
     cursor: pointer;
     font-size: 20px;
     transition: 0.5s ease;
+    z-index: 1000;
 }
 
 #Scrolltotop:hover{
@@ -93,6 +94,7 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    z-index: 1000;
 }
 
 #contbtn:hover{
