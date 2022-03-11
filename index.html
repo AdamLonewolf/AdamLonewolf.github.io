@@ -6,68 +6,349 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css"> 
+    
+    <!--Typed js-->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <title>AdamPortfolio</title>
 </head>
 <body>
-    
-    <header class="header">
 
-        <!--Navbar start-->
+    
+    <!--Bouton scroll to, me contacter et aimer le site-->
+
+    <button id="Scrolltotop" class="tippy-btn" data-tippy-content="Cliquez pour revenir en haut">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <a href="mailto:ismomee2403@gmail.com" id="contbtn" class="tippy-btn" data-tippy-content="Cliquez pour me contacter"><i class="fa-solid fa-paper-plane"></i></a>
+
+    <!--Header-->
+
+    <header>
+
+        <!--Navbar-->
 
         <nav>
+
             <input type="checkbox" id="check">
             <label for="check" class="checkbtn"><i class="fa-solid fa-bars"></i></label>
             <div class="logo">
-                <a href="index.html"><img src="img/Logoportfolioorigin.png" alt="" class="logo-brand"></a>
+                <a href="index.html"><img src="img/Logoportfolioorigin.png" alt="Logo Portfolio"></a>
             </div>
             <ul>
-                <li><a href="#">A Propos</a></li>
-                <li><a href="#">Projets</a></li>
-                <li><a href="#">Me contacter</a></li>
+                <li><a href="#apropos">A Propos</a></li>
+                <li><a href="#realisations">Mes Réalisations</a></li>
+                <li><a href="#mecontacter">Me contacter</a></li>
             </ul>
+
         </nav>
 
-        <!--Navbar End-->
+        <!--Navbar end-->
 
     </header>
 
-        <!--Presentation sections-->
 
-    <section class="hero-section">
-                <!--Hero-section start-->
+    <!--Main-->
 
-                <div class="container">
-                    <div class="wrapper hero-section-wrapper">
-                        <div class="presentation">
-                            <h1>Je suis <span>Coulibaly Ismaël Adam</span>, Développeur Front-end et Web designer.</h1>
-                            <h4>Bienvenue sur mon portfolio !</h4>
-                            <div class="btn-hero">
-                                <a href="" class="btn btn-hero-section">Voir mon travail <i class="fa-solid fa-arrow-down"></i></a>
-                            </div>
-                        </div>
-                        <div class="img-hero">
-                            <img src="img/wolfimgorigin.png" alt="image hero section">
+    <main>
+        <!--Partie Hero section ou accueil-->
+
+        <section class="hero-section">
+            <div class="container">
+
+                <div class="wrapper hero-section-wrapper">
+
+                    <div class="hero-title">
+                        <h2>Je suis <span class="textcolor">Coulibaly Ismaël Adam</span>, Développeur Front-end et Web designer.</h2>
+                        <h3>Bienvenue sur mon portefolio !</h3>
+                        <div class="btn-div">
+                        <a href="#projets" class="hero-btn btn">Voir mes réalisations<i class="fa-solid fa-arrow-down"></i></a>
                         </div>
                     </div>
-        
+    
+                    <div class="hero-image"><img src="img/wolfimgorigin.png" alt="ImgLoup"></div>
+    
                 </div>
-                <!--Hero-section end-->
-    </section>
 
-    <section class="project-section">
-
-        <div class="container">
-            <div class="section-title">
-                <h2>Mes projets</h2>
-                <hr>
             </div>
-        </div>    
+           
+        </section>
 
-    </section>
+        <!--La section des projets-->
 
-    <footer>
-        
+        <section class="project-section" id="realisations">
+            <div class="container">
+                <div class="wrapper project-section-wrapper">
+                      
+                    <!--Titre de section-->
+                      <div class="project-section-title">
+                        <h2>Mes Réalisations</h2>
+                    </div>
+                    
+                    <!--Projets-->
+
+                    <div class="mini-wrapper-project">
+
+                        <!--Je fais des groupes pour positionner plus facilement les éléments-->
+                        
+                        <div class="group1">
+                            
+                        <div class="cards">
+                            <img src="img/Healthy.png" alt="img heathy">
+                            <div class="cardoverlay">
+                                <h2>Projet Healthy</h2>
+                                <a href="file:///C:/Healthy/accueil.html" class="btn btn-card">Voir le site</a>
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <img src="img/Traveler.png" alt="img Traveler">
+                            <div class="cardoverlay">
+                                <h2>Projet Traveler</h2>
+                                <p></p>
+                                <a href="file:///C:/Prototype/index.html" class="btn btn-card">Voir le site</a>
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <img src="img/Jonathan.jpg" alt="img Jonathan">
+                            <div class="cardoverlay">
+                                <h2>Projet Jonathan</h2>
+                                <p></p>
+                                <a href="file:///C:/Prototype/index.html" class="btn btn-card">Voir le site</a>
+                            </div>
+                        </div>
+
+                        </div>
+
+                        <div class="group2">
+                            
+                            <div class="cards">
+                                <img src="img/hustbee.jpg" alt="img hustbee">
+                                <div class="cardoverlay">
+                                    <h2>Projet Hust bee</h2>
+                                    <p></p>
+                                    <a href="http://brandio.io/envato/hustbee/html/index.html?storefront=envato-elements" class="btn btn-card">Voir le site</a>
+                                </div>
+                            </div>
+                            <div class="cards">
+                                <img src="img/eagleeyes.jpg" alt="img eagleeyes">
+                                <div class="cardoverlay">
+                                    <h2>Projet Eagle Eyes</h2>
+                                    <p></p>
+                                    <a href="http://htmlbeans.com/html/eagleeyes/?storefront=envato-elements" class="btn btn-card">Voir le site</a>
+                                </div>
+                            </div>
+                            <div class="cards">
+                                <img src="img/houserent.jpg" alt="img houserent">
+                                <div class="cardoverlay">
+                                    <h2>Projet House Rent</h2>
+                                    <p></p>
+                                    <a href="https://htmlguru.net/house-rent/?storefront=envato-elements" class="btn btn-card">Voir le site</a>
+                                </div>
+                            </div>
+    
+                            </div>
+                      
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!--Section à propos-->
+
+        <section class="about-section" id="apropos">
+
+            <div class="container">
+                <div class="wrapper about-wrapper">
+                      
+
+                    <!--Presentation-->
+
+                    <!--Ici je fais ma présentation personelle-->
+
+                    <div class="presentation-text">
+                        <h2>Qui suis-je ?</h2>
+
+                        <p>Salut ! Mon nom est <span class="text-color anim">Coulibaly Ismaël Adam</span> , je suis spécialisé dans le front-end et le web design. Concernant mes hobbys, j'aime jouer aux jeux-vidéos, regarder des animes. J'aime aussi le graphisme, la littérature et la musique.   Comme outils de travail, j'utilise <span id="typed"></span> </p>
+                    </div>
+
+
+                    <!--Partie correspondant aux appréciations-->
+
+                    <div class="presentation-appreciation">
+                        <h2>Ce qu'on pense de mon travail</h2>
+
+                        <div class="wrapper appreciation-wrapper">
+
+                            <div class="person-info">
+  
+                                <div class="person-img"><img src="img/mee2.jpeg" alt="ImgSoeur" ></div>
+                                <h2>Coulibaly Myriam Massiho</h2>
+                                <h3>Chef de Projet Digital</h3>
+                            </div>
+
+                            <div class="appreciation-text">
+                                <p class="quote"><i class="fa-solid fa-quote-left"></i>Adam est quelqu'un de curieux et ouvert à l'apprentissage. Il fait énormement de recherches et est très persévérant. Il est également pointilleux sur son travail et s'investit énormement sur ce qu'il fait. Son travail très abouti en raison de sa créativité et du resultat de ses recherches.<i class="fa-solid fa-quote-right"></i></p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!--Partie correspondant aux compétences-->
+
+                        <div class="presentation-skills">
+                            <h2>mes compétences</h2>
+
+                    <!--Blocs contenant mes compétences-->
+
+                        <div class="wrapper skill-wrapper">
+
+                            <div class="skill-group1">
+
+                                <div class="bloc autonome-bloc">
+                                    <h2>
+                                        Autonome
+                                    </h2>
+                                    <p>je travaille énormement en autodidacte. Je fais des recherches pour progresser et apprendre de nouvelles choses.</p>
+                                </div>
+                                <div class="bloc patient">
+                                    <h2>
+                                        Patient
+                                    </h2>
+                                    <p>je prends mon temps pour analyser tous les problèmes survenant sur mon travail pour ensuite les régler</p>
+                                </div>
+
+                            </div>
+
+                            <div class="skill-group2">
+
+                                <div class="bloc organised">
+                                    <h2>
+                                        Polyvalent
+                                    </h2>
+                                    <p>je prends mon temps pour analyser tous les problèmes survenant sur mon travail pour ensuite les régler</p>
+                                </div>
+                                <div class="bloc polyvalent">
+                                    <h2>
+                                        Organisé
+                                    </h2>
+                                    <p>je suis très méticuleux sur mon travail. Je prends le temps de bien m'organiser et de créer des maquettes afin de guider mes clients.
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        </div>
+
+
+                </div>
+            </div>
+
+        </section>
+
+        <!--Main End-->
+
+    </main>
+
+    <!--Footer (partie contacts)-->
+
+    <footer id="mecontacter">
+        <div class="container">
+            <div class="wrapper contact-wrapper">
+                <div class="elements-wrapper">
+                    <div class="contact-one">
+
+                    <h2>Mes réseaux sociaux</h2>
+
+                    <div class="rs-icons">
+                        <div id="myButton" class="tippy-box" data-tippy-content="AdamLonewolf"><a href="https://github.com/AdamLonewolf" ><i class="fa-brands fa-github"></i></a></div>
+                        <div id="myButton" class="tippy-box" data-tippy-content="Lonewolf_adam24"><a href="https://www.instagram.com/lonewolf_adam24/"><i class="fa-brands fa-instagram"></i></a></div>
+                        <div id="myButton" class="tippy-box" data-tippy-content="@AdamLonewolf"><a href="https://twitter.com/AdamLonewolf"><i class="fa-brands fa-twitter"></i></a></div>
+                    </div>
+
+                    <h2>Numéro de Téléphone</h2>
+                    <p class="tel">+225 07 48 49 86 31</p>
+
+                    <div class="link">
+                        <p>Vous avez des questions ? <a href="mailto:ismomee2403@gmail.com">écrivez moi</a></p>
+                    </div>
+
+                    </div>
+
+                </div>
+
+                <!--copyright-->
+                <p class="copyright">&copy; 2020 &nbsp; - &nbsp; Coulibaly Ismaël Adam &nbsp; - &nbsp; Web designer et développeur web</p>
+            </div>
+        </div>
+        <!--Contacts et réseaux sociaux-->
+
+
     </footer>
+
+
+
+    <script>
+
+        var typed = new Typed("#typed", {
+            strings: ["HTML", "CSS", "Javascript", "Photoshop", "Figma", "Illustrator"],
+            typeSpeed: 100,
+            backSpeed: 50,
+            backDelay: 500,
+            startDelay: 1000,
+            loop: true,
+        })
+
+
+
+
+    //Scroll to top
+
+
+         var btnscrolltotop = document.getElementById('Scrolltotop');
+
+
+        btnscrolltotop.addEventListener('click', function(){
+            window.scrollTo({
+                top: 0,
+                left:0,
+                behavior:"smooth"
+            })
+        });
+
+    </script>
+        
+        <!--Reveal elements on scroll-->
+        
+<script src="js/scroll-out.js"></script>
+   <script>
+      ScrollOut({
+          targets: 'h2,h3,p'
+      })
+   </script>
+
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
+  <script>
+    // With the above scripts loaded, you can call `tippy()` with a CSS
+    // selector and a `content` prop:
+    tippy('#myButton', {
+      Animation: 'scale',
+      arrow: true,
+      placement:'bottom',
+    })
+    tippy("#Scrolltotop", {
+      Animation: 'scale',
+      arrow: true,
+      placement:'left',
+    })
+    tippy( "#contbtn", {
+      Animation: 'scale',
+      arrow: true,
+      placement:'left',
+    })
+  </script>
 
 </body>
 </html>

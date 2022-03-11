@@ -1,61 +1,86 @@
-@import 'button.css';
+@import 'button.css'; /*Je crée un document css séparément pour les boutons.*/
 
 @font-face {
-    font-family:'Poppins' ;
-    src: url("../css/fonts/Poppins/Poppins-Regular.ttf");
+    font-family:'Montserrat' ;
+    src: url(../css/fonts/Montserrat/Montserrat-Medium.ttf);
 }
 
-
-/*Navbar*/
 
 *{
-    padding: 0;
-    margin: 0;
+    
     box-sizing: border-box;
-    font-family: 'Poppins';
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat';
 }
+
+/*Scroll de la page*/
+html{
+    scroll-behavior: smooth;
+}
+
+/*Navbar*/
 
 nav{
     width: 100%;
     height: 75px;
     background-color: #fff;
     line-height: 75px;
-    padding: 0px 80px;
+    padding: 0px 80px; 
 }
+
+
 
 nav .logo{
-   float: left; 
-   transition: 0.3s ease;
+    float: left;
 }
 
-nav .logo-brand{
-    width: 115px;
+nav .logo img{
+    width:120px;
     height: auto;
-}
 
+}
 
 nav ul{
- display: flex;
- justify-content: center;
- align-items: center;
+    float: right;
 }
 
 nav ul li{
     list-style: none;
+    display: inline-block;
 }
 
 nav ul li a{
+    position: relative;
     text-decoration: none;
     color:#363636 ;
     font-size: 18px;
-    font-weight: 600;
     padding: 0px 20px;
-    transition: 0.4s ease;
+    font-weight: 600;
+    transition: 0.5s ease;
 }
 
 nav ul li a:hover{
     color: #CEC6B2;
 }
+
+nav ul li a::after{
+    content: "";
+    position: absolute;
+    background-color: #363636;
+    height: 3px;
+    width:0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover::after{
+    width:100%;
+}
+
+
+
 
 .checkbtn{
     color: #363636;
@@ -90,7 +115,6 @@ nav ul li a:hover{
             left: -100%;
             text-align: center;
             transition: 0.4s ease;
-            display: block;
         }
 
         nav ul li{
@@ -104,28 +128,21 @@ nav ul li a:hover{
         }
 }
 
-/*container and wrapper*/
+/*container et section */
 
+section{
+    padding-top:40px;
+    padding-bottom: 40px;
+}
 .container{
     padding: 0px 80px;
 }
 
-
-
-/*Hero section*/
+/*Hero-section*/
 
 .hero-section{
-    background-color: #363636;
-}
-
-.presentation h1{
-    color: #fff;
-    font-size: 35px;
-
-}
-
-.presentation h4{
-    color: #9D958A;    
+    background-color: #262626;
+    
 }
 
 .hero-section-wrapper{
@@ -134,39 +151,393 @@ nav ul li a:hover{
     align-items: center;
 }
 
-.img-hero img{
-    width: 750px;
+.hero-image img{
+    width: 700px;
     height: auto;
-    position: relative;
-    left: 70px;
 }
 
-.btn-hero{
-    margin-top: 40px;
+.hero-title h2{
+    color: #fff;
+    font-size: 40px;
+    max-width: 900px;
+    margin: 20px 0px;
 }
 
-.btn-hero i{
-    padding: 0px 5px;
+.hero-title h3{
+    color: #9D958A;
 }
 
+
+/*span*/
+
+.textcolor{
+    color: #9D958A;
+}
 
 /*Project-section*/
 
 .project-section{
     background-color: #fff;
-    height: 100vh;
+    
 }
 
-.section-title h2{
+.project-section-title h2{
+    position: relative;
+    font-size: 25px;
     color: #363636;
     font-weight: 600;
-    margin-top: 50px;
+    margin-bottom: 30px;
+    transition: 0.5s;
+    transform-origin: left;
+    transform: scaleX(0);
 }
 
-hr{
-    height:3px;
-    border:none;
-    border-radius: 5px;
+.project-section-title h2[data-scroll="in"]
+{
+    transform: scaleX(1);
+}
+
+.project-section-title h2::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: right;
     background-color: #363636;
+    transition: 0.5s;
+}
+
+.project-section-title h2[data-scroll="in"]::before
+{
+    transform: scaleX(0);
+    transition-delay: 0.5s;
+}
+
+
+
+.cards{
+    position: relative;
+     width: 350px;
+    height: 250px;
+    background-color: #262626;
+    border-radius: 20px;
+    margin: 10px 10px;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+    
+}
+
+.cards img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.cards:hover .cardoverlay{
+   opacity: 1;
+}
+
+.cardoverlay{
+    text-align: center;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #262626;
+    opacity: 0;
+    z-index: 3;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: 0.5s ease;
+}
+
+.cardoverlay h2{
+    color: #fff;
+    margin: 50px;
+}
+
+.group1, .group2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mini-wrapper-project{
+    margin-top: 50px 0px;
+}
+
+/*About-section*/
+
+.about-section{
+    background-color: #262626;
+    
+}
+
+.about-section-title h2{
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+/*Presentation perso*/
+
+.presentation-text{
+    text-align: center;
+}
+
+.presentation-text h2{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 60px;
+    margin-bottom: 50px;
+}
+
+
+.presentation-text p{
+    color: #fff;
+    max-width: 600px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+#typed{
+    color: #fff;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    
+}
+
+
+
+
+/*Appreciation*/
+
+.presentation-appreciation h2{
+
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 50px;
+
+}
+
+
+
+.person-info h2{
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.person-info h3{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+
+}
+
+.person-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.person-img img{
     width: 200px;
+    height: 200px;
+    border-radius: 150px;
+    border: 6px solid white;
+    margin: 0px 30px;
+    overflow: hidden;
+}
+
+.appreciation-text{
+    text-align: center;
+    color: #fff;
+    margin: 20px auto;
+    max-width: 720px;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.appreciation-text i{
+    font-size: 20px;
+    margin: 0px 15px;
+}
+
+/*skills*/
+
+.presentation-skills h2{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.bloc{
+    margin: 30px 40px;
+}
+
+.bloc p{
+    text-align: center;
+    color: #fff;
+}
+
+.bloc h2{
+    color:#fff;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.skill-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+/*Footer-Contacts part*/
+
+footer{
+    background-color: #5E5E60;
+    padding: 40px 0px;
+}
+
+.contact-one h2{
+    color: #fff;
+}
+
+.rs-icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rs-icons div{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: #fff;
+    margin: 40px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rs-icons i{
+  margin: 20px 20px;
+  font-size: 25px;
+}
+
+.rs-icons a{
+    text-decoration: none;
+    color: #363636;
+    transition: 0.5s ease;
+  }
+
+  .rs-icons div:hover{
+    background-color: #363636;
+  }
+  .rs-icons div:hover a{
+   color: #fff;
+  }
+  
+
+.elements-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.tel{
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    margin: 40px 0px;
+    font-weight: 600;
+}
+
+.link p{
+    color: #fff;
+    font-size: 19px;
+}
+
+.link a{
+    text-decoration:none;
+    color:#CEC6B2;
+    border-bottom: dotted;
+}
+
+.copyright{
+    text-align: center;
+    font-weight: 200;
+    font-size: 18px;
+    color: #fff;
+    margin: 40px 0px;
+}
+
+/*Media-queries de la page*/
+
+@media screen and (max-width:990px){
+    .hero-image img{
+       display: none;
+    }
+    .hero-title h2{
+        color: #fff;
+        font-size: 25px;
+        margin: 20px 0px;
+    }
+
+    .group1,.group2{
+        flex-direction: column;
+    }
+
+    .cards{
+        position: relative;
+        max-width: 600px;
+        background-color: #262626;
+        border-radius: 20px;
+        margin: 10px 10px;
+        overflow: hidden;
+        cursor: pointer;
+        z-index: 1;
+        
+    }
+
+    .skill-wrapper{
+        flex-direction: column;
+    }
+
+    .hero-section-wrapper{
+        display: block;
+    }
+    
+   .person-img{
+       display: block;
+       position: relative;
+       top: 0;
+       left: 0;
+       bottom: 0;
+       right: 0;
+   }
+   .person-img img{
+    max-width: 600px;
+    border-radius: 150px;
+    border: 6px solid white;
+    margin: 0px 30px;
+    overflow: hidden;
+}
 }
