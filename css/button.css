@@ -102,3 +102,16 @@
     color: #fff;
 }
 
+
+
+
+/*hero-section MQ*/
+
+@media screen and (max-width:425px){
+
+    .hero-btn{
+   padding: 6px 10px;
+   font-size: 15px;
+    }
+
+}

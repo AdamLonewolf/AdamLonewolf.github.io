@@ -1,0 +1,85 @@
+/*skills*/
+
+.presentation-skills h2{
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.bloc{
+    margin: 30px 20px;
+}
+
+.bloc p{
+    color: #fff;
+    text-align: center;
+}
+
+
+.bloc i{
+    margin: 0px 10px;
+    font-size: 25px;
+}
+
+.bloc h2{
+    color:#dddddd;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.skill-wrapper{
+    display: flex;
+    justify-content: center;
+
+}
+
+
+@media screen and (max-width:768px){
+    .skill-wrapper{
+      flex-direction: column;
+    }
+
+    .bloc p{    
+        text-align: center;
+    }
+
+    .bloc{
+        margin-right: 0;
+        margin-left: 0;
+        padding: 0px 40px;
+    }
+    
+}
+
+
+@media screen and (max-width:320px){
+    .bloc h2{
+        font-size: 18px;
+    }
+
+
+    .bloc p{    
+        text-align: center;
+    }
+    
+}
+
+
+@media screen and (max-width:280px){
+    .bloc h2{
+        font-size: 18px;
+    }
+
+    .bloc i{
+        display: none;
+    }
+
+    .bloc p{    
+        text-align: center;
+    }
+    
+}
+

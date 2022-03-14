@@ -1,0 +1,67 @@
+/*About-section*/
+
+.about-section{
+    background-color: #262626;
+    
+}
+
+/*Presentation perso*/
+
+.presentation-wrapper{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    
+}
+
+.tools{
+    padding: 20px 0px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.presentation-text h2{
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+
+.presentation-text p{
+    color: #fff;
+    margin: auto;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+#typed{
+    color: #dddddd;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    
+}
+
+@media screen and (max-width:425px){
+    .presentation-text p{
+    font-size: 18px;
+    text-align: left;
+    line-height: 1.5rem;
+    }
+
+    .tools{
+        font-size: 15px !important;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width:375px){
+
+
+    .tools{
+        font-size: 13px !important;
+        text-align: left;
+    }
+}

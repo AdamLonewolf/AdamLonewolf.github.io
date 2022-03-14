@@ -1,0 +1,142 @@
+/*Project-section*/
+
+.project-section{
+    background-color: #fff;
+    
+}
+
+.project-section-title h2{
+    position: relative;
+    font-size: 25px;
+    color: #363636;
+    font-weight: 600;
+    margin-bottom: 30px;
+    transition: 0.5s;
+    transform-origin: left;
+    transform: scaleX(0);
+}
+
+.project-section-title h2[data-scroll="in"]
+{
+    transform: scaleX(1);
+}
+
+.project-section-title h2::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: right;
+    background-color: #363636;
+    transition: 0.5s;
+}
+
+.project-section-title h2[data-scroll="in"]::before
+{
+    transform: scaleX(0);
+    transition-delay: 0.5s;
+}
+
+
+
+.cards{
+    position: relative;
+    width: 380px;
+    height: 280px;
+    background-color: #262626;
+    border-radius: 20px;
+    margin: 10px 10px;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+    
+}
+
+.cards img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.cards:hover .cardoverlay{
+   opacity: 1;
+}
+
+.cardoverlay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #262626;
+    opacity: 0;
+    z-index: 3;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: 0.5s ease;
+}
+
+.cardoverlay h2{
+    color: #fff;
+    margin: 50px;
+}
+
+.group1, .group2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mini-wrapper-project{
+    margin-top: 50px 0px;
+}
+
+/*Project-section MQ*/
+
+
+@media screen and (max-width:1024px){
+    .cards{
+        position: relative;
+        width: 320px;
+        height: 190px;
+    }
+}
+
+
+@media screen and (max-width:768px){
+    
+    .group1,.group2{
+        flex-direction: column;
+    }
+    
+    .cards{
+        position: relative;
+        width: 350px;
+        height: 250px;
+    }
+}
+
+
+@media screen and (max-width:375px){
+    
+    .cards{
+        position: relative;
+        width: 290px;
+        height: 190px;
+    }
+}
+
+
+@media screen and (max-width:320px){
+    
+    .cards{
+        position: relative;
+        width: 270px;
+        height: auto;
+    }
+}

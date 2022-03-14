@@ -1,0 +1,125 @@
+/*Appreciation*/
+
+.presentation-appreciation .appreciation-title{
+
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: 60px;
+    margin-bottom: 50px;
+    text-align: center;
+
+}
+
+.appreciation-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.person-img img{
+   width: 250px;
+   height: 250px;
+   border-radius: 150px;
+   border: 6px solid white;
+   margin: 0px 30px;
+}
+
+
+
+.person-info h2{
+    color: #dddddd;
+    font-size: 30px;
+    font-weight: 600;
+    margin: 20px 0px;
+}
+
+.person-info h3{
+    color: #ddd;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 15px 0px;
+}
+
+
+
+
+.appreciation-text{
+    color: #fff;
+    padding: 20px 20px;
+    font-size: 18px;
+    line-height: 25px;
+
+}
+
+@media screen and (max-width:768px){
+    .appreciation-wrapper{
+        display: block;
+    }
+
+    .person-img img{
+        width: 200px;
+        height: 200px;
+        border-radius: 150px;
+        border: 6px solid white;
+
+     }
+
+     .person-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     }
+    
+
+     .person-info h2{
+        text-align: center;
+    }
+    
+    .person-info h3{
+      text-align: center;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .person-info h2{
+     line-height: 40px;
+    }
+    
+
+    .appreciation-text{
+        text-align: left;
+    }
+
+
+}
+
+
+@media screen and (max-width:320px){
+    .person-info h2{
+        font-size: 20px;
+    }
+    .person-info h3{
+        font-size: 18px;
+    }
+
+    .appreciation-text{
+        font-size: 16px;
+    }
+
+    .person-img img{
+        width: 170px;
+        height: 170px;
+        border-radius: 150px;
+        border: 6px solid white;
+
+     }
+}
+
+
+
+@media screen and (max-width:280px){
+    .person-info h2{
+        line-height: 30px;
+       }
+}

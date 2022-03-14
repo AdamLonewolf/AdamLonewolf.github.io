@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/descript.css"> 
+    
+    <!--Typed js-->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <title>Projet Hust bee</title>
+</head>
+<body>
+
+        
+    <!--Loader de la page-->
+
+
+    <div class="loader">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+     </div>
+
+       <!--Header-->
+
+       <header>
+
+        <!--Navbar-->
+
+        <nav class="nav-menu nav-menu-mobile">
+
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn"><i class="fa-solid fa-bars"></i></label>
+            <div class="logo">
+                <a href="index.html"><img src="img/Logoportfolioorigin.png" alt="Logo Portfolio"></a>
+            </div>
+            <ul>
+                <li ><a href="#apropos" id="apropostag">A Propos</a></li>
+                <li><a href="#realisations" id="realisation">Mes Réalisations</a></li>
+                <li><a href="#mecontacter" id="contact">Me contacter</a></li>
+            </ul>
+
+        </nav>
+
+        <!--Navbar end-->
+
+        <!--Partie description du projet-->
+
+        <section class="description-section">
+                <div class="container">
+                    <div class="wrapper">
+                        <div class="project-img">
+                                <img src="img/hustbee.jpg" alt="img projet Healthy">
+                        </div>
+                        <div class="text-content">
+                            <h2 class="font-large">Hust Bee</h2>
+                            <h3 class="font-medium">Site d'hébergement de sites web</h3>
+                            <h3 class="font-medium">Statut: Terminé</h3>
+                            <p class="font-text">Hustbee est un site conçu le 24 mars 2021. C'est un hébergeur de sites en ligne, un peu comme Netlify ou encore Github Pages. J suis plutôt content du résultat final, même si ça été très compliqué dès le début.</p>
+                            <div class="btn-description">
+                                <a href="http://brandio.io/envato/hustbee/html/index.html?storefront=envato-elements" class="btn-look">Voir le site</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+    </header>
+
+       <!--Loader-->
+       <script>
+        const loader = document.querySelector('.loader');
+
+
+    window.addEventListener('load',() => {
+    setTimeout(()=>{
+    loader.classList.add('fondu-out');
+    setTimeout(()=>{
+        loader.classList.add('hidden');
+        
+    }, 700)//disparition
+    
+}, 2000)//opacité reduite
+});
+    </script>
+
+</body>
+</html>

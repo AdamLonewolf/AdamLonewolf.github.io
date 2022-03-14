@@ -13,6 +13,16 @@
 </head>
 <body>
 
+    <!--Loader de la page-->
+
+
+    <div class="loader">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+     </div>
+
     
     <!--Bouton scroll to, me contacter et aimer le site-->
 
@@ -28,7 +38,7 @@
 
         <!--Navbar-->
 
-        <nav>
+        <nav class="nav-menu nav-menu-mobile">
 
             <input type="checkbox" id="check">
             <label for="check" class="checkbtn"><i class="fa-solid fa-bars"></i></label>
@@ -36,9 +46,9 @@
                 <a href="index.html"><img src="img/Logoportfolioorigin.png" alt="Logo Portfolio"></a>
             </div>
             <ul>
-                <li><a href="#apropos">A Propos</a></li>
-                <li><a href="#realisations">Mes Réalisations</a></li>
-                <li><a href="#mecontacter">Me contacter</a></li>
+                <li ><a href="#apropos" id="apropostag">A Propos</a></li>
+                <li><a href="#realisations" id="realisation">Mes Réalisations</a></li>
+                <li><a href="#mecontacter" id="contact">Me contacter</a></li>
             </ul>
 
         </nav>
@@ -58,9 +68,9 @@
 
                 <div class="wrapper hero-section-wrapper">
 
-                    <div class="hero-title">
+                    <div class="hero-title font-large">
                         <h2>Je suis <span class="textcolor">Coulibaly Ismaël Adam</span>, Développeur Front-end et Web designer.</h2>
-                        <h3>Bienvenue sur mon portefolio !</h3>
+                        <h3 class="font-sub">Bienvenue sur mon portefolio !</h3>
                         <div class="btn-div">
                         <a href="#realisations" class="hero-btn btn">Voir mes réalisations<i class="fa-solid fa-arrow-down"></i></a>
                         </div>
@@ -96,24 +106,19 @@
                         <div class="cards">
                             <img src="img/Healthy.png" alt="img heathy">
                             <div class="cardoverlay">
-                                <h2>Projet Healthy</h2>
-                                <a href="file:///C:/Healthy/accueil.html" class="btn btn-card">Voir le site</a>
+                                <a href="healthy.html" class="btn btn-card">En savoir plus</a>
                             </div>
                         </div>
                         <div class="cards">
                             <img src="img/Traveler.png" alt="img Traveler">
                             <div class="cardoverlay">
-                                <h2>Projet Traveler</h2>
-                                <p></p>
-                                <a href="file:///C:/Prototype/index.html" class="btn btn-card">Voir le site</a>
+                                <a href="traveler.html" class="btn btn-card">En savoir plus</a>
                             </div>
                         </div>
                         <div class="cards">
                             <img src="img/Jonathan.jpg" alt="img Jonathan">
                             <div class="cardoverlay">
-                                <h2>Projet Jonathan</h2>
-                                <p></p>
-                                <a href="file:///C:/Prototype/index.html" class="btn btn-card">Voir le site</a>
+                                <a href="jonathan.html" class="btn btn-card">En savoir plus</a>
                             </div>
                         </div>
 
@@ -124,25 +129,19 @@
                             <div class="cards">
                                 <img src="img/hustbee.jpg" alt="img hustbee">
                                 <div class="cardoverlay">
-                                    <h2>Projet Hust bee</h2>
-                                    <p></p>
-                                    <a href="http://brandio.io/envato/hustbee/html/index.html?storefront=envato-elements" class="btn btn-card">Voir le site</a>
+                                    <a href="hustbee.html" class="btn btn-card">En savoir plus</a>
                                 </div>
                             </div>
                             <div class="cards">
                                 <img src="img/eagleeyes.jpg" alt="img eagleeyes">
                                 <div class="cardoverlay">
-                                    <h2>Projet Eagle Eyes</h2>
-                                    <p></p>
-                                    <a href="http://htmlbeans.com/html/eagleeyes/?storefront=envato-elements" class="btn btn-card">Voir le site</a>
+                                    <a href="eagle.html" class="btn btn-card">En savoir plus</a>
                                 </div>
                             </div>
                             <div class="cards">
                                 <img src="img/houserent.jpg" alt="img houserent">
                                 <div class="cardoverlay">
-                                    <h2>Projet House Rent</h2>
-                                    <p></p>
-                                    <a href="https://htmlguru.net/house-rent/?storefront=envato-elements" class="btn btn-card">Voir le site</a>
+                                    <a href="houserent.html" class="btn btn-card">En savoir plus</a>
                                 </div>
                             </div>
     
@@ -165,31 +164,37 @@
                     <!--Presentation-->
 
                     <!--Ici je fais ma présentation personelle-->
-
+                <div class="presentation-wrapper">
                     <div class="presentation-text">
                         <h2>Qui suis-je ?</h2>
 
-                        <p>Salut ! Mon nom est <span class="text-color anim">Coulibaly Ismaël Adam</span> , je suis spécialisé dans le front-end et le web design. Concernant mes hobbys, j'aime jouer aux jeux-vidéos, regarder des animes. J'aime aussi le graphisme, la littérature et la musique.   Comme outils de travail, j'utilise <span id="typed"></span> </p>
+                        <p>Salut ! Mon nom est <span class="text-color anim">Coulibaly Ismaël Adam</span> , je suis spécialisé dans le front-end et le web design. Je suis capable de mener à bien un projet et de concevoir un site répondant aux besoins de mon client. Concernant mes hobbys, j'aime jouer aux jeux-vidéos, regarder des animes, le graphisme, la littérature et la musique.</p>
+                        <p class="tools">Comme outils de travail, j'utilise <span id="typed"></span></p>
                     </div>
-
+                </div>        
 
                     <!--Partie correspondant aux appréciations-->
 
                     <div class="presentation-appreciation">
-                        <h2>Ce qu'on pense de mon travail</h2>
+                        <h2 class="appreciation-title">Ce qu'on pense de mon travail</h2>
 
                         <div class="wrapper appreciation-wrapper">
 
-                            <div class="person-info">
-  
-                                <div class="person-img"><img src="img/mee2.jpeg" alt="ImgSoeur" ></div>
-                                <h2>Coulibaly Myriam Massiho</h2>
-                                <h3>Chef de Projet Digital</h3>
+                            <div class="person-img">
+                                <img src="img/mee-crop.png" alt="ImgSoeur" >
                             </div>
 
                             <div class="appreciation-text">
-                                <p class="quote"><i class="fa-solid fa-quote-left"></i>Adam est quelqu'un de curieux et ouvert à l'apprentissage. Il fait énormement de recherches et est très persévérant. Il est également pointilleux sur son travail et s'investit énormement sur ce qu'il fait. Son travail très abouti en raison de sa créativité et du resultat de ses recherches.<i class="fa-solid fa-quote-right"></i></p>
+
+                                <div class="person-info">
+                                    <h2>Coulibaly Myriam Massiho</h2>
+                                    <h3>Chef de Projet Digital</h3>
+                                </div>
+
+                                <p class="quote">" Adam est quelqu'un de curieux et ouvert à l'apprentissage. Il fait énormement de recherches et est très persévérant. Il est également pointilleux sur son travail et s'investit énormement sur ce qu'il fait. Son travail est très abouti en raison de sa créativité et du fruit de ses recherches. "</p>
+
                             </div>
+
 
                         </div>
                     </div>
@@ -197,7 +202,7 @@
                     <!--Partie correspondant aux compétences-->
 
                         <div class="presentation-skills">
-                            <h2>mes compétences</h2>
+                            <h2>Mes compétences</h2>
 
                     <!--Blocs contenant mes compétences-->
 
@@ -207,15 +212,15 @@
 
                                 <div class="bloc autonome-bloc">
                                     <h2>
-                                        Autonome
+                                        Autonome <i class="fa-solid fa-magnifying-glass"></i>
                                     </h2>
-                                    <p>je travaille énormement en autodidacte. Je fais des recherches pour progresser et apprendre de nouvelles choses.</p>
+                                    <p>je suis autodidacte. Je fais des recherches pour progresser et apprendre de nouvelles choses.</p>
                                 </div>
                                 <div class="bloc patient">
                                     <h2>
-                                        Patient
+                                        Patient <i class="fa-solid fa-clock"></i>
                                     </h2>
-                                    <p>je prends mon temps pour analyser tous les problèmes survenant sur mon travail pour ensuite les régler</p>
+                                    <p>Je prends mon temps pour analyser tous les problèmes survenant sur mon travail pour ensuite les régler.</p>
                                 </div>
 
                             </div>
@@ -224,15 +229,15 @@
 
                                 <div class="bloc organised">
                                     <h2>
-                                        Polyvalent
+                                        Polyvalent <i class="fa-solid fa-paintbrush"></i>
                                     </h2>
-                                    <p>je prends mon temps pour analyser tous les problèmes survenant sur mon travail pour ensuite les régler</p>
+                                    <p>En plus du développement, je fais aussi du graphisme (Modélisation 3D, Montage photo et vidéo, Pixel-art etc..).</p>
                                 </div>
                                 <div class="bloc polyvalent">
                                     <h2>
-                                        Organisé
+                                        Organisé <i class="fa-solid fa-sitemap"></i>
                                     </h2>
-                                    <p>je suis très méticuleux sur mon travail. Je prends le temps de bien m'organiser et de créer des maquettes afin de guider mes clients.
+                                    <p>Je suis très méticuleux sur mon travail. Je prends le temps de bien m'organiser et de créer des maquettes afin de guider mes clients.
                                     </p>
                                 </div>
 
@@ -268,7 +273,7 @@
                     </div>
 
                     <h2>Numéro de Téléphone</h2>
-                    <p class="tel">+225 07 48 49 86 31</p>
+                    <p class="tel">+225 07-48-49-86-31</p>
 
                     <div class="link">
                         <p>Vous avez des questions ? <a href="mailto:ismomee2403@gmail.com">écrivez moi</a></p>
@@ -287,15 +292,31 @@
 
     </footer>
 
+        <!--Loader-->
+        <script>
+            const loader = document.querySelector('.loader');
+
+
+        window.addEventListener('load',() => {
+        setTimeout(()=>{
+        loader.classList.add('fondu-out');
+        setTimeout(()=>{
+            loader.classList.add('hidden');
+            
+        }, 700)//disparition
+        
+}, 2000)//opacité reduite
+});
+        </script>
 
 
     <script>
 
         var typed = new Typed("#typed", {
             strings: ["HTML", "CSS", "Javascript", "Photoshop", "Figma", "Illustrator"],
-            typeSpeed: 100,
-            backSpeed: 50,
-            backDelay: 500,
+            typeSpeed: 110,
+            backSpeed: 70,
+            backDelay: 400,
             startDelay: 1000,
             loop: true,
         })
@@ -316,6 +337,25 @@
                 behavior:"smooth"
             })
         });
+
+     
+
+        //Close menu-hamburger (code js pour fermer automatiquement le menu hamburger)
+
+        var apropos = document.getElementById('apropostag');
+        var realisation = document.getElementById('realisation');
+        var contact = document.getElementById('contact');
+        
+        apropos.addEventListener("click", ()=>{
+            document.getElementById('check').checked = false
+        })
+        realisation.addEventListener("click", ()=>{
+            document.getElementById('check').checked = false
+        })
+        contact.addEventListener("click", ()=>{
+            document.getElementById('check').checked = false
+        })
+        
 
     </script>
         
