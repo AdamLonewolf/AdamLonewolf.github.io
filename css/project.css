@@ -81,10 +81,6 @@
     transition: 0.5s ease;
 }
 
-.cardoverlay h2{
-    color: #fff;
-    margin: 50px;
-}
 
 .group1, .group2{
     display: flex;
