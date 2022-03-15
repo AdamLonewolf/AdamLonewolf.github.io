@@ -255,6 +255,7 @@ body{
 
     .text-content{
         padding:20px 0px;
+        margin: 0px 20px;
     }
 
     .project-img img{
@@ -287,9 +288,6 @@ body{
 
 
 @media screen and (max-width:425px){
-    .wrapper{
-        padding: 0;
-    }
 
     .container{
         padding: 0px 30px;
@@ -298,6 +296,10 @@ body{
     .project-img img{
         width: 320px;
         height: auto;
+    }
+
+    .text-content{
+        margin: 0;
     }
 
 }
